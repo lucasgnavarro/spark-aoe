@@ -1,0 +1,6 @@
+#! /bin/bash
+
+source .venv/bin/activate
+echo "Running `python --version`"
+AWS_XRAY_SDK_ENABLED=False AWS_PROFILE=$1 AWS_SDK_LOAD_CONFIG=1 SLS_DEBUG=$2 npx serverless offline start -s local
+deactivate
