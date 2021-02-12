@@ -1,3 +1,5 @@
+from os import getenv
+
 MY_TEST_VARIABLE = 'TEST'
 DB_USER = getenv('DB_USER', 'wololo')
 DB_PASS = getenv('DB_PASS', 'wololo')
