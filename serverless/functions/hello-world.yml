@@ -1,0 +1,7 @@
+hello:
+  handler: app/endpoints/hello/get_hello.lambda_handler
+  events:
+  - http:
+      path: /hello-world
+      method: get
+      cors: true

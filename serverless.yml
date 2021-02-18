@@ -61,13 +61,10 @@ plugins:
   - serverless-offline
 
 functions:
-  hello:
-    handler: app/endpoints/hello/get_hello.lambda_handler
-    events:
-    - http:
-        path: /hello-world
-        method: get
-        cors: true
+  - ${file(./serverless/functions/database_migrate.yml)}
+  - ${file(./serverless/functions/hello-world.yml)}
+
+
         
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

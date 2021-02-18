@@ -1,3 +1,11 @@
+from os import getenv, pardir
+from os.path import dirname, join, realpath
+
+#from dotenv import load_dotenv
+
+PROJECT_ROOT = join(dirname(realpath(__file__)), pardir)
+
+STAGE = getenv('STAGE')
 MY_TEST_VARIABLE = 'TEST'
 DB_USER = getenv('DB_USER', 'wololo')
 DB_PASS = getenv('DB_PASS', 'wololo')
