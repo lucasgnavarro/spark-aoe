@@ -1,0 +1,7 @@
+#!/bin/bash
+# For VS code and PyCharm
+# patch invoke.py if necessary
+if ! grep -q "import os" "node_modules/serverless/lib/plugins/aws/invokeLocal/invoke.py"; 
+then
+sed -i "/context /a    \    # debugging --------------\n    import os\n    import logging\n    logger  = logging.getLogger('invoke lambda')\n    if os.getenv('REMOTE_DEBUG_SERVER') is not None and os.getenv('REMOTE_DEBUG_SERVER').lower() in ('pycharm', 'vscode'):\n        port = int(os.getenv('DEBUGGER_PORT', 5890))\n        if os.getenv('REMOTE_DEBUG_SERVER').lower() == 'pycharm':\n        \timport pydevd_pycharm\n        \tlogger.info(f'Handler is trying to connect to remote server on port {port}')\n        \tpydevd_pycharm.settrace('localhost', port=port, stdoutToServer=True, stderrToServer=True, suspend=False)\n        else:\n        \timport ptvsd\n        \tptvsd.enable_attach(address=('0.0.0.0', port), redirect_output=True)\n        \tlogger.info(f'Handler is waiting for the remote debugger to connect to port {port}')\n        \tptvsd.wait_for_attach()\n    # debugging --------------\n" node_modules/serverless/lib/plugins/aws/invokeLocal/invoke.py
+fi

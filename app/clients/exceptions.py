@@ -1,0 +1,2 @@
+class HttpServiceException(Exception):
+    pass

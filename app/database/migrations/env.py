@@ -1,7 +1,7 @@
 from logging.config import fileConfig
 
 from alembic import context
-from app.database.models.base import Base
+from app.database.models import Base
 from app.settings import DATABASE_URL
 from sqlalchemy import create_engine
 

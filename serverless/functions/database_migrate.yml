@@ -1,0 +1,3 @@
+database_migrate:
+    handler: app/database_migrate.handler
+    #vpc: ${file(./serverless/resources/net/vpc.yml)}
