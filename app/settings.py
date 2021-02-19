@@ -14,3 +14,5 @@ DB_PORT = getenv('DB_PORT', '5432')
 DB_NAME = getenv('DB_NAME', 'aoe')
 DATABASE_URL = f"postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
+# External apis
+API_DOG_CEO_URL = 'https://dog.ceo/api'

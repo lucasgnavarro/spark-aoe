@@ -1,0 +1,3 @@
+dog_breeds_ingest:
+    handler: app/tasks/dog_breeds_ingest.handler
+    #vpc: ${file(./serverless/resources/net/vpc.yml)}

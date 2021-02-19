@@ -1,0 +1,3 @@
+#!/bin/sh
+
+AWS_PROFILE=$1 AWS_SDK_LOAD_CONFIG=1 npx sls invoke local --function $2 --data $3 -s local

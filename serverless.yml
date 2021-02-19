@@ -62,8 +62,8 @@ plugins:
 
 functions:
   - ${file(./serverless/functions/database_migrate.yml)}
-  - ${file(./serverless/functions/hello-world.yml)}
-
+  - ${file(./serverless/functions/api/hello-world.yml)}
+  - ${file(./serverless/functions/tasks/dog_breeds_ingest.yml)}
 
         
 #    The following are a few example events you can configure

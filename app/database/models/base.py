@@ -12,3 +12,6 @@ from sqlalchemy.sql import and_
 logger = logging.getLogger()
 
 Base = declarative_base()
+
+def generate_uuid():
+    return uuid.uuid4()

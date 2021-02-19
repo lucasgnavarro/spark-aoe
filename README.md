@@ -54,3 +54,6 @@
 - To apply the migrations (make effective the changes in thedatabase).
     - run `bin/migrate`
 
+## Run tasks in local environment
+- `bin/execute_task {YOUR_AWS_ROLE} {TASK_NAME} {data}`
+    - Example for dog_breeds_ingest: run `bin/execute_task default dog_breeds_ingest ''`
