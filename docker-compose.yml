@@ -9,4 +9,5 @@ services:
       POSTGRES_PASSWORD: wololo
       POSTGRES_USER: wololo
     ports:
-      - "5432:5432"
+      - "5445:5432"
+    

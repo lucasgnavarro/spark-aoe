@@ -68,6 +68,39 @@ functions:
         path: /hello-world
         method: get
         cors: true
+  
+  civilizations:
+    handler: app/endpoints/aoe/get_civilizations.lambda_handler
+    events:
+    - http:
+        path: /civilizations
+        method: get
+        cors: true  
+  
+  units:
+    handler: app/endpoints/aoe/get_units.lambda_handler
+    events:
+    - http:
+        path: /units
+        method: get
+        cors: true       
+
+  structures:
+    handler: app/endpoints/aoe/get_structures.lambda_handler
+    events:
+    - http:
+        path: /structures
+        method: get
+        cors: true            
+
+  technologies:
+    handler: app/endpoints/aoe/get_technologies.lambda_handler
+    events:
+    - http:
+        path: /technologies
+        method: get
+        cors: true  
+        
         
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
